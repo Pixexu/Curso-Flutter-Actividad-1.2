@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:random_name_generator/random_name_generator.dart';
 
 class PeopleList extends StatefulWidget {
@@ -10,7 +11,7 @@ class PeopleList extends StatefulWidget {
 
 class _PeopleListState extends State<PeopleList> {
   final _suggestions = <String>[];
-  final _biggerFont = const TextStyle(fontSize: 18);
+  //final _biggerFont = const TextStyle(fontSize: 18);
   final _randomNames = RandomNames(Zone.us);
 
   @override
@@ -28,10 +29,16 @@ class _PeopleListState extends State<PeopleList> {
             ListTile(
               title: Text(
                 _suggestions[i],
-                style: _biggerFont,
+                //style: _biggerFont,
+                style: GoogleFonts.acme(),
               ),
+              tileColor: Colors.red[50],
             ),
-            const Divider(),
+            const Divider(
+              color: Colors.red,
+              height: 3,
+              thickness: 1,
+            ),
           ],
         );
       },
