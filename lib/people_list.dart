@@ -27,12 +27,24 @@ class _PeopleListState extends State<PeopleList> {
         return Column(
           children: [
             ListTile(
+              leading: const Icon(
+                Icons.person_2,
+                color: Colors.orange,
+                size: 30,
+              ),
               title: Text(
                 _suggestions[i],
                 //style: _biggerFont,
-                style: GoogleFonts.acme(),
+                style: GoogleFonts.acme(
+                  textStyle: const TextStyle(fontSize: 16),
+                ),
               ),
               tileColor: Colors.red[50],
+              trailing: const Icon(
+                Icons.call,
+                color: Colors.orange,
+                size: 30,
+              ),
             ),
             const Divider(
               color: Colors.red,
